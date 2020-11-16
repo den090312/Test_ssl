@@ -26,18 +26,37 @@ namespace Telarm
             var server = "83.220.246.39";
             var port = 9000;
 
+            //using (var tcpClient = new TcpClient(server, port))
+            //{
+            //    using (var sslStream = new SslStream(tcpClient.GetStream()))
+            //    {
+            //        var protocols = SslProtocols.Tls | SslProtocols.Tls11 | SslProtocols.Tls12 | SslProtocols.Ssl2 | SslProtocols.Ssl3;
+
+            //        //sslStream.AuthenticateAsServer(certificate, true, protocols, false);
+
+            //        sslStream.AuthenticateAsServer(certificate);
+            //    }
+
+            //    Console.WriteLine("CONNECTED");
+            //}
+
             using (var tcpClient = new TcpClient(server, port))
             {
-                using (var sslStream = new SslStream(tcpClient.GetStream()))
+                var sb = new StringBuilder();
+
+                using (var stream = tcpClient.GetStream())
                 {
-                    var protocols = SslProtocols.Tls | SslProtocols.Tls11 | SslProtocols.Tls12 | SslProtocols.Ssl2 | SslProtocols.Ssl3;
+                    var buffer = new byte[1024];
 
-                    //sslStream.AuthenticateAsServer(certificate, true, protocols, false);
-
-                    sslStream.AuthenticateAsServer(certificate);
+                    do
+                    {
+                        var dataRead = stream.Read(buffer, 0, buffer.Length);
+                        sb.AppendLine(Encoding.UTF8.GetString(buffer, 0, dataRead));
+                    }
+                    while (stream.DataAvailable);
                 }
-
-                Console.WriteLine("CONNECTED");
+                    
+                Console.WriteLine(sb.ToString());
             }
 
             //IPHostEntry host = Dns.GetHostEntry("localhost");

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telarm", "Telarm.csproj", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telarm2", "..\Telarm2\Telarm2.csproj", "{F878F473-68D5-41F2-88B6-E865C0215E1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telarm3", "..\Telarm3\Telarm3.csproj", "{D029EB82-2EB6-4DBA-A63C-E4E40C30A0BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F878F473-68D5-41F2-88B6-E865C0215E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F878F473-68D5-41F2-88B6-E865C0215E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F878F473-68D5-41F2-88B6-E865C0215E1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D029EB82-2EB6-4DBA-A63C-E4E40C30A0BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D029EB82-2EB6-4DBA-A63C-E4E40C30A0BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D029EB82-2EB6-4DBA-A63C-E4E40C30A0BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D029EB82-2EB6-4DBA-A63C-E4E40C30A0BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
